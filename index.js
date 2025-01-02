@@ -18,20 +18,18 @@ function logNames(items) {
     INVENTORY.forEach(INVENTORY => console.log(INVENTORY.name))
 }
 
-// -_-_-_-_-_-_-_-_-_-_- TO  FIX -_-_-_-_-_-_-_-_-_-_-
 /**
  * @param {Item[]} items - array of items
  * @returns {string[]} an array of item names in all uppercase
  */
 function getUppercaseNames(items) {
   // TODO: use `map`
-  const uppers = INVENTORY.map(INVENTORY => INVENTORY.name)
+  const uppers = items.map(item => item.name.toUpperCase())
 
   return(uppers);
   // console.log(uppers.toUpperCase());
 }
 
-// -_-_-_-_-_-_-_-_-_-_- TO FIX -_-_-_-_-_-_-_-_-_-_-
 /**
  * @param {Item[]} items - array of items
  * @param {number} id - id of the item to find
@@ -39,8 +37,8 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
-  const foundItem = INVENTORY.find((id)=> {
-    return itemId === "1";
+  const foundItem = items.find((item)=> {
+    return id === item.id;
   })
   return(foundItem)
 }
@@ -54,9 +52,9 @@ function getItemById(items, id) {
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
   const price = [];
-  for (let i = 0; i < INVENTORY.length; i++) {
-    if (INVENTORY[i] === (itemId)) {
-      price.push(INVENTORY[i])
+  for (let i = 0; i < items.length; i++) {
+    if (items[i] === (name)) {
+      price.push([i])
       console.log(price)
     }
   }
@@ -71,7 +69,7 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
-  const filterCategory = INVENTORY.filter(category => category.length === "fruits")
+  const filterCategory = items.filter(category => category.length === "fruits")
   return(filterCategory)
 }
 
