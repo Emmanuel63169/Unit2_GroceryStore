@@ -28,10 +28,10 @@ function getUppercaseNames(items) {
   const uppers = INVENTORY.map(INVENTORY => INVENTORY.name)
 
   return(uppers);
-  // console.log(uppers.toUpperCase());??
+  // console.log(uppers.toUpperCase());
 }
 
-// -_-_-_-_-_-_-_-_-_-_- TO DO -_-_-_-_-_-_-_-_-_-_-
+// -_-_-_-_-_-_-_-_-_-_- TO FIX -_-_-_-_-_-_-_-_-_-_-
 /**
  * @param {Item[]} items - array of items
  * @param {number} id - id of the item to find
@@ -39,10 +39,13 @@ function getUppercaseNames(items) {
  */
 function getItemById(items, id) {
   // TODO: use `find`
-  
+  const foundItem = INVENTORY.find((id)=> {
+    return itemId === "1";
+  })
+  return(foundItem)
 }
 
-// -_-_-_-_-_-_-_-_-_-_- TO DO -_-_-_-_-_-_-_-_-_-_-
+// -_-_-_-_-_-_-_-_-_-_- TO FIX -_-_-_-_-_-_-_-_-_-_-
 /**
  * @param {Item[]} items - array of items
  * @param {string} name - name of the item to find
@@ -50,10 +53,17 @@ function getItemById(items, id) {
  */
 function getItemPriceByName(items, name) {
   // TODO: use a loop!
-
+  const price = [];
+  for (let i = 0; i < INVENTORY.length; i++) {
+    if (INVENTORY[i] === (itemId)) {
+      price.push(INVENTORY[i])
+      console.log(price)
+    }
+  }
+  return price
 }
 
-// -_-_-_-_-_-_-_-_-_-_- TO DO -_-_-_-_-_-_-_-_-_-_-
+// -_-_-_-_-_-_-_-_-_-_- TO FIX -_-_-_-_-_-_-_-_-_-_-
 /**
  * @param {Item[]} items - array of items
  * @param {string} category
@@ -61,27 +71,34 @@ function getItemPriceByName(items, name) {
  */
 function getItemsByCategory(items, category) {
   // TODO: use `filter`
-
+  const filterCategory = INVENTORY.filter(category => category.length === "fruits")
+  return(filterCategory)
 }
 
-// -_-_-_-_-_-_-_-_-_-_- TO DO -_-_-_-_-_-_-_-_-_-_-
+// -_-_-_-_-_-_-_-_-_-_- TO FIX -_-_-_-_-_-_-_-_-_-_-
 /**
  * @param {Item[]} items - array of items
  * @returns {number} the total quantity of all items
  */
 function countItems(items) {
   // TODO: use `reduce`
-
+  // const sum = category.reduce((accumulator, currentValue) => {
+  //   return accumulator + currentValue;
+  // }, 0);
+  // return(sum);
 }
 
-// -_-_-_-_-_-_-_-_-_-_- TO DO -_-_-_-_-_-_-_-_-_-_-
+// -_-_-_-_-_-_-_-_-_-_- TO FIX -_-_-_-_-_-_-_-_-_-_-
 /**
  * @param {Item[]} items - array of items
  * @returns {number} the cost of all given items
  */
 function calculateTotalPrice(items) {
   // TODO: use `reduce`
-  
+  // const sum = quantity.reduce((accumulator, currentValue) => {
+  //   return accumulator + currentValue;
+  // }, 0);
+  // return(sum);
 }
 
 // --------------------- DO NOT CHANGE THE CODE BELOW ------------------------ //
